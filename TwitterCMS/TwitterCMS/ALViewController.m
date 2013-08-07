@@ -34,8 +34,6 @@
 
 - (IBAction)search:(id)sender {
     NSLog(@"%@", [self.searchField text]);
-    
-    
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

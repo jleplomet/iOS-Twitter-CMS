@@ -10,4 +10,11 @@
 
 @interface ALTweetCollectionViewCell : UICollectionViewCell
 
+
+@property (weak, nonatomic) IBOutlet UIImageView *avatar;
+@property (weak, nonatomic) IBOutlet UILabel *userName;
+@property (weak, nonatomic) IBOutlet UILabel *status;
+
+
+
 @end

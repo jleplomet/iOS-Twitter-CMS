@@ -19,9 +19,10 @@ Route::get('/', array('before' => 'auth.basic', function()
   return Response::json( array('user_auth_token' => $publicToken, 'user' => Auth::user()->toArray()) );
 }));
 
-Route::group(array('prefix' => 'api/v1', 'before' => 'auth.token'), function() {
+Route::group( array('prefix' => 'api/v1'/*, 'before' => 'auth.token'*/), function() {
   Route::resource('tweets', 'TweetsController');
   Route::get('search', 'TwitterController@search');
+  Route::get('refresh', 'TwitterController@refresh');
 });
 
 App::error(function( AuthTokenNotAuthorizedException $exception ) {

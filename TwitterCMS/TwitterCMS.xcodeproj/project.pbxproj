@@ -80,6 +80,7 @@
 		FACEC78C17AC5F5100BA3156 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		FACEC79617AC5FCE00BA3156 /* ALTwitterCMSApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALTwitterCMSApiClient.h; sourceTree = "<group>"; };
 		FACEC79717AC5FCE00BA3156 /* ALTwitterCMSApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALTwitterCMSApiClient.m; sourceTree = "<group>"; };
+		FAFD958217B2B5990089BAF0 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +103,7 @@
 		FACEC74417AC5F1A00BA3156 = {
 			isa = PBXGroup;
 			children = (
+				FAFD958217B2B5990089BAF0 /* libsqlite3.dylib */,
 				FACEC77917AC5F5100BA3156 /* AFNetworking */,
 				FACEC77317AC5F3E00BA3156 /* MobileCoreServices.framework */,
 				FACEC77417AC5F3E00BA3156 /* Security.framework */,
@@ -138,13 +140,13 @@
 				FACEC76817AC5F1A00BA3156 /* MainStoryboard.storyboard */,
 				FACEC76B17AC5F1A00BA3156 /* ALViewController.h */,
 				FACEC76C17AC5F1A00BA3156 /* ALViewController.m */,
-				FACEC75717AC5F1A00BA3156 /* Supporting Files */,
 				FACEC79617AC5FCE00BA3156 /* ALTwitterCMSApiClient.h */,
 				FACEC79717AC5FCE00BA3156 /* ALTwitterCMSApiClient.m */,
 				FA2A9BB517AC7BD100F4852D /* ALTwitterSearchViewController.h */,
 				FA2A9BB617AC7BD100F4852D /* ALTwitterSearchViewController.m */,
 				FA2A9BB817AC7FD800F4852D /* ALTweetCollectionViewCell.h */,
 				FA2A9BB917AC7FD800F4852D /* ALTweetCollectionViewCell.m */,
+				FACEC75717AC5F1A00BA3156 /* Supporting Files */,
 			);
 			path = TwitterCMS;
 			sourceTree = "<group>";
