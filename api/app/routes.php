@@ -20,12 +20,11 @@ Route::get('/', array('before' => 'auth.basic', function()
 }));
 
 Route::group( array('prefix' => 'api/v1'/*, 'before' => 'auth.token'*/), function() {
-  
-  Route::resource('tweets', 'TweetsController');
-
   Route::get('search', 'TwitterController@search');
   Route::get('search/next', 'TwitterController@searchNextResults');
   Route::get('search/refresh', 'TwitterController@searchRefreshResults');
+
+  Route::post('cms/approve', 'TwitterCMSController@approve');
 });
 
 App::error(function( AuthTokenNotAuthorizedException $exception ) {

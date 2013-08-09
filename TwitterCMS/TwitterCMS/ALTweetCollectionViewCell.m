@@ -47,15 +47,17 @@
     
     [self.createdAt setText:[createdAt timeAgo]];
     [self.userName setText:[tweet user]];
-    [self.avatar setImageWithURL:profileImageUrl];
+    [self.avatar setImageWithURL:profileImageUrl placeholderImage:[UIImage imageNamed:@"default_profile_0_normal.png"]];
     [self.status setText:[tweet text]];
     
     CGSize maxStatusSize = CGSizeMake(230.0f, MAXFLOAT);
     CGSize expectedStatusSize = [[tweet text] sizeWithFont:self.status.font constrainedToSize:maxStatusSize lineBreakMode:NSLineBreakByWordWrapping];
     CGRect statusFrame = self.status.frame;
     
-    statusFrame.size.height = expectedStatusSize.height + 10;
+    statusFrame.size.height = expectedStatusSize.height + 20;
     self.status.frame = statusFrame;
+    
+    [self.status sizeToFit];
 }
 
 /*

@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Avatarlabs. All rights reserved.
 //
 
-#import "ALTwitterSearchViewController.h"
+#import "ALTwitterSearchResultsViewController.h"
 #import "ALTwitterCMSApiClient.h"
 #import "ALTweetCollectionViewCell.h"
 #import "AFNetworking.h"
@@ -15,7 +15,7 @@
 
 #define TWEET_COUNT 10
 
-@interface ALTwitterSearchViewController ()
+@interface ALTwitterSearchResultsViewController ()
 
 @property (strong, nonatomic) NSMutableArray *tweets;
 @property (strong, nonatomic) NSString *nextResults;
@@ -23,7 +23,7 @@
 
 @end
 
-@implementation ALTwitterSearchViewController
+@implementation ALTwitterSearchResultsViewController
 
 bool loadFromBottom = NO;
 bool refreshing = YES; //set for now so we can store the stupid refresh url...
@@ -138,11 +138,13 @@ bool firstLoad = YES;
     
     NSLog(@"tweetId: %@ user: %@", [tweet tweetId], [tweet user]);
     
-    NSString *requestParams = [[NSString alloc] initWithFormat:@"?tweetId=%@&user=%@&status=%@&created_at=%@&avatar=%@", [tweet tweetId], [tweet user], [tweet text], [tweet createdAt], [tweet userAvatar]];
+    NSString *requestParams = [[NSString alloc] initWithFormat:@"?tweetId=%@&user=%@&text=%@&created_at=%@&avatar=%@", [tweet tweetId], [tweet user], [tweet text], [tweet createdAt], [tweet userAvatar]];
     
     NSLog(@"%@", requestParams);
     
     NSMutableDictionary *queryString = [self buildRequestParameters:requestParams];
+    
+    [self postToTwitterCMSApi:@"cms/approve" withParams:queryString];
     
     [self.collectionView performBatchUpdates:^{
         NSArray *itemPaths = [self.collectionView indexPathsForSelectedItems];
@@ -152,8 +154,6 @@ bool firstLoad = YES;
         
         [self.collectionView deleteItemsAtIndexPaths:itemPaths];
     } completion:nil];
-    
-    //[self postToTwitterCMSApi:@"tweets" withParams:queryString];
 }
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -173,6 +173,8 @@ bool firstLoad = YES;
     
     return CGSizeMake(width, labelSize.height + 60);
 }
+
+
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {
     float scrollViewHeight = scrollView.frame.size.height;
@@ -201,10 +203,12 @@ bool firstLoad = YES;
      parameters:params
      success:^(AFHTTPRequestOperation *operation, id JSON) {
         //
+         NSLog(@"%@", JSON);
      }
      failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         //
-         
+         NSLog(@"Error!");
+         NSLog(@"%@", error);
     }];
 }
 
@@ -283,17 +287,8 @@ bool firstLoad = YES;
                  [tweet setUserAvatar:[user objectForKey:@"profile_image_url"]];
                  [tweet setUser:[user objectForKey:@"screen_name"]];
                  
-                 
-                [self.tweets addObject:tweet];
-                 //[self.collectionView performBatchUpdates:^{
-                     //[self.collectionView insertItemsAtIndexPaths:@[[NSIndexPath indexPathForItem:[self.tweets count] - 1 inSection:0]]];
-                 //} completion:nil];
+                 [self.tweets addObject:tweet];
              }
-             
-             
-             //sort by created_at
-             NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"createdAt" ascending:NO];
-             [self.tweets sortUsingDescriptors:[NSArray arrayWithObjects:sortDescriptor, nil]];
              
              //kill loading indicator
              [self destoryLoadingIndicator:indicator];
@@ -306,14 +301,15 @@ bool firstLoad = YES;
              //if we are loading from the bottom, just reset bool to false
              if (loadFromBottom) {
                  loadFromBottom = NO;
-             }
+             }             
              
-             //tell the collection view to reload
+             //sort by created_at
+             NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"createdAt" ascending:NO];
+             [self.tweets sortUsingDescriptors:[NSArray arrayWithObjects:sortDescriptor, nil]];
+             
+             
+             
              [self.collectionView reloadData];
-             //[//self.collectionView setD]
-             //[self.collectionView insertItemsAtIndexPaths:self.tweets];
-             
-             
              
          }
      }

@@ -1,5 +1,5 @@
 //
-//  ALAppDelegate.h
+//  ALMenuViewController.h
 //  TwitterCMS
 //
 //  Created by Jeff L on 8/9/13.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ALAppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface ALMenuViewController : UITableViewController
 
 @end

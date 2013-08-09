@@ -14,10 +14,12 @@ class CreateTweetsTable extends Migration {
 	{
 		Schema::create('tweets', function(Blueprint $table) {
 			$table->increments('id');
-			$table->string('username');
-			$table->string('tweet');
+			$table->integer('tweetId');
+			$table->string('user');
+			$table->string('text');
+			$table->string('avatar');
+			$table->string('tweetCreatedAt');
 			$table->enum('status', array('approved', 'rejected'));
-			$table->integer('user_id');
 			$table->timestamps();
 		});
 	}

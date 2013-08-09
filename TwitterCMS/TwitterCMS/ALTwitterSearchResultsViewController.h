@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ALTwitterSearchViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate>
+@interface ALTwitterSearchResultsViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate>
 
 @property (strong, nonatomic) NSString *searchTerm;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-- (IBAction)refreshSearchResults:(id)sender;
 
+- (IBAction)refreshSearchResults:(id)sender;
 
 @end

@@ -13,9 +13,9 @@
 
 
 @property (weak, nonatomic) IBOutlet UIImageView *avatar;
+@property (weak, nonatomic) IBOutlet UILabel *createdAt;
 @property (weak, nonatomic) IBOutlet UILabel *userName;
 @property (weak, nonatomic) IBOutlet UILabel *status;
-@property (weak, nonatomic) IBOutlet UILabel *createdAt;
 
 -(void)setTweet:(ALTweet *)tweet;
 
