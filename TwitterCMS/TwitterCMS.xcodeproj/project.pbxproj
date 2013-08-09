@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		FA2A9BB717AC7BD100F4852D /* ALTwitterSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2A9BB617AC7BD100F4852D /* ALTwitterSearchViewController.m */; };
 		FA2A9BBA17AC7FD800F4852D /* ALTweetCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2A9BB917AC7FD800F4852D /* ALTweetCollectionViewCell.m */; };
+		FAADF27D17B31AEC00D5B6E8 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = FAADF27717B31AEC00D5B6E8 /* LICENSE */; };
+		FAADF27E17B31AEC00D5B6E8 /* NSDate+TimeAgo.m in Sources */ = {isa = PBXBuildFile; fileRef = FAADF27917B31AEC00D5B6E8 /* NSDate+TimeAgo.m */; };
+		FAADF27F17B31AEC00D5B6E8 /* NSDate+TimeAgo.podspec in Resources */ = {isa = PBXBuildFile; fileRef = FAADF27A17B31AEC00D5B6E8 /* NSDate+TimeAgo.podspec */; };
+		FAADF28017B31AEC00D5B6E8 /* NSDateTimeAgo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FAADF27B17B31AEC00D5B6E8 /* NSDateTimeAgo.bundle */; };
+		FAADF28117B31AEC00D5B6E8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FAADF27C17B31AEC00D5B6E8 /* README.md */; };
 		FACEC75117AC5F1A00BA3156 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACEC75017AC5F1A00BA3156 /* UIKit.framework */; };
 		FACEC75317AC5F1A00BA3156 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACEC75217AC5F1A00BA3156 /* Foundation.framework */; };
 		FACEC75517AC5F1A00BA3156 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACEC75417AC5F1A00BA3156 /* CoreGraphics.framework */; };
@@ -33,6 +38,7 @@
 		FACEC79417AC5F5100BA3156 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = FACEC78A17AC5F5100BA3156 /* AFXMLRequestOperation.m */; };
 		FACEC79517AC5F5100BA3156 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = FACEC78C17AC5F5100BA3156 /* UIImageView+AFNetworking.m */; };
 		FACEC79817AC5FCE00BA3156 /* ALTwitterCMSApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FACEC79717AC5FCE00BA3156 /* ALTwitterCMSApiClient.m */; };
+		FAFD958617B2D1CF0089BAF0 /* ALTweet.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFD958517B2D1CF0089BAF0 /* ALTweet.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +46,12 @@
 		FA2A9BB617AC7BD100F4852D /* ALTwitterSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALTwitterSearchViewController.m; sourceTree = "<group>"; };
 		FA2A9BB817AC7FD800F4852D /* ALTweetCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALTweetCollectionViewCell.h; sourceTree = "<group>"; };
 		FA2A9BB917AC7FD800F4852D /* ALTweetCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALTweetCollectionViewCell.m; sourceTree = "<group>"; };
+		FAADF27717B31AEC00D5B6E8 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		FAADF27817B31AEC00D5B6E8 /* NSDate+TimeAgo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TimeAgo.h"; sourceTree = "<group>"; };
+		FAADF27917B31AEC00D5B6E8 /* NSDate+TimeAgo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TimeAgo.m"; sourceTree = "<group>"; };
+		FAADF27A17B31AEC00D5B6E8 /* NSDate+TimeAgo.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "NSDate+TimeAgo.podspec"; sourceTree = "<group>"; };
+		FAADF27B17B31AEC00D5B6E8 /* NSDateTimeAgo.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NSDateTimeAgo.bundle; sourceTree = "<group>"; };
+		FAADF27C17B31AEC00D5B6E8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		FACEC74D17AC5F1A00BA3156 /* TwitterCMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterCMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACEC75017AC5F1A00BA3156 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FACEC75217AC5F1A00BA3156 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -81,6 +93,8 @@
 		FACEC79617AC5FCE00BA3156 /* ALTwitterCMSApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALTwitterCMSApiClient.h; sourceTree = "<group>"; };
 		FACEC79717AC5FCE00BA3156 /* ALTwitterCMSApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALTwitterCMSApiClient.m; sourceTree = "<group>"; };
 		FAFD958217B2B5990089BAF0 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		FAFD958417B2D1CE0089BAF0 /* ALTweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALTweet.h; sourceTree = "<group>"; };
+		FAFD958517B2D1CF0089BAF0 /* ALTweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALTweet.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +114,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FAADF27617B31AEC00D5B6E8 /* NSDate-TimeAgo */ = {
+			isa = PBXGroup;
+			children = (
+				FAADF27717B31AEC00D5B6E8 /* LICENSE */,
+				FAADF27817B31AEC00D5B6E8 /* NSDate+TimeAgo.h */,
+				FAADF27917B31AEC00D5B6E8 /* NSDate+TimeAgo.m */,
+				FAADF27A17B31AEC00D5B6E8 /* NSDate+TimeAgo.podspec */,
+				FAADF27B17B31AEC00D5B6E8 /* NSDateTimeAgo.bundle */,
+				FAADF27C17B31AEC00D5B6E8 /* README.md */,
+			);
+			name = "NSDate-TimeAgo";
+			path = "../../../dev/NSDate-TimeAgo";
+			sourceTree = "<group>";
+		};
 		FACEC74417AC5F1A00BA3156 = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +163,7 @@
 		FACEC75617AC5F1A00BA3156 /* TwitterCMS */ = {
 			isa = PBXGroup;
 			children = (
+				FAADF27617B31AEC00D5B6E8 /* NSDate-TimeAgo */,
 				FACEC75F17AC5F1A00BA3156 /* ALAppDelegate.h */,
 				FACEC76017AC5F1A00BA3156 /* ALAppDelegate.m */,
 				FACEC76817AC5F1A00BA3156 /* MainStoryboard.storyboard */,
@@ -147,6 +176,8 @@
 				FA2A9BB817AC7FD800F4852D /* ALTweetCollectionViewCell.h */,
 				FA2A9BB917AC7FD800F4852D /* ALTweetCollectionViewCell.m */,
 				FACEC75717AC5F1A00BA3156 /* Supporting Files */,
+				FAFD958417B2D1CE0089BAF0 /* ALTweet.h */,
+				FAFD958517B2D1CF0089BAF0 /* ALTweet.m */,
 			);
 			path = TwitterCMS;
 			sourceTree = "<group>";
@@ -248,6 +279,10 @@
 				FACEC76517AC5F1A00BA3156 /* Default@2x.png in Resources */,
 				FACEC76717AC5F1A00BA3156 /* Default-568h@2x.png in Resources */,
 				FACEC76A17AC5F1A00BA3156 /* MainStoryboard.storyboard in Resources */,
+				FAADF27D17B31AEC00D5B6E8 /* LICENSE in Resources */,
+				FAADF27F17B31AEC00D5B6E8 /* NSDate+TimeAgo.podspec in Resources */,
+				FAADF28017B31AEC00D5B6E8 /* NSDateTimeAgo.bundle in Resources */,
+				FAADF28117B31AEC00D5B6E8 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +308,8 @@
 				FACEC79817AC5FCE00BA3156 /* ALTwitterCMSApiClient.m in Sources */,
 				FA2A9BB717AC7BD100F4852D /* ALTwitterSearchViewController.m in Sources */,
 				FA2A9BBA17AC7FD800F4852D /* ALTweetCollectionViewCell.m in Sources */,
+				FAFD958617B2D1CF0089BAF0 /* ALTweet.m in Sources */,
+				FAADF27E17B31AEC00D5B6E8 /* NSDate+TimeAgo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
