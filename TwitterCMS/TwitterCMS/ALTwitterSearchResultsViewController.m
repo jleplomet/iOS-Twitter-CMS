@@ -8,7 +8,7 @@
 
 #import "ALTwitterSearchResultsViewController.h"
 #import "ALTwitterCMSApiClient.h"
-#import "ALTweetCollectionViewCell.h"
+#import "ALSearchTweetCollectionViewCell.h"
 #import "AFNetworking.h"
 #import "ALTweet.h"
 #import "NSDate+TimeAgo.h"
@@ -116,7 +116,7 @@ bool firstLoad = YES;
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    ALTweetCollectionViewCell *tweetCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"tweetCell" forIndexPath:indexPath];
+    ALSearchTweetCollectionViewCell *tweetCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"tweetCell" forIndexPath:indexPath];
     
     //check if we are not in the last cell
     
@@ -171,7 +171,7 @@ bool firstLoad = YES;
     
     CGSize labelSize = [status sizeWithFont:[UIFont systemFontOfSize:13.0f] constrainedToSize:toSize lineBreakMode:NSLineBreakByWordWrapping];
     
-    return CGSizeMake(width, labelSize.height + 60);
+    return CGSizeMake(width, labelSize.height + 70);
 }
 
 
@@ -277,12 +277,13 @@ bool firstLoad = YES;
                  NSDate *created_at = [dateFormat dateFromString:[status objectForKey:@"created_at"]];
                  NSString *id_str = [status objectForKey:@"id_str"];
                  
-                 //NSLog(@"tweetId: %@ user: %@", id_str, [user objectForKey:@"screen_name"]);
+                 NSLog(@"tweetId: %@ user: %@", id_str, [user objectForKey:@"screen_name"]);
                  
                  //build tweet cell object
                  ALTweet *tweet = [[ALTweet alloc] init];
                  [tweet setCreatedAt:created_at];
-                 [tweet setTweetId: [NSNumber numberWithInt: [id_str intValue]]];
+                 
+                 [tweet setTweetId: id_str];
                  [tweet setText:[status objectForKey:@"text"]];
                  [tweet setUserAvatar:[user objectForKey:@"profile_image_url"]];
                  [tweet setUser:[user objectForKey:@"screen_name"]];

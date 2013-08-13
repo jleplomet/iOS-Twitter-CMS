@@ -10,10 +10,12 @@
 
 @interface ALTweet : NSObject
 
-@property NSNumber *tweetId;
+@property NSString *id;
+@property NSString *tweetId;
 @property NSString *text;
 @property NSDate   *createdAt;
 @property NSString *userAvatar;
 @property NSString *user;
+@property NSString *tweetStatus;
 
 @end

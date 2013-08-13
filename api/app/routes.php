@@ -24,7 +24,9 @@ Route::group( array('prefix' => 'api/v1'/*, 'before' => 'auth.token'*/), functio
   Route::get('search/next', 'TwitterController@searchNextResults');
   Route::get('search/refresh', 'TwitterController@searchRefreshResults');
 
+  Route::get('cms', 'TwitterCMSController@index');
   Route::post('cms/approve', 'TwitterCMSController@approve');
+  Route::post('cms/updatetweet', 'TwitterCMSController@updateTweet');
 });
 
 App::error(function( AuthTokenNotAuthorizedException $exception ) {

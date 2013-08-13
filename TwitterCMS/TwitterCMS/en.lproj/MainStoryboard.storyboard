@@ -18,58 +18,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
-                        <segue destination="2" kind="relationship" relationship="rootViewController" id="T1q-rb-dnr"/>
+                        <segue destination="APR-Yg-9sM" kind="relationship" relationship="rootViewController" id="Q5x-1y-Q1g"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yvK-Ab-1Ff" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-11" y="118"/>
-        </scene>
-        <!--Initial View Controller-->
-        <scene sceneID="5">
-            <objects>
-                <viewController id="2" customClass="ALInitialViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Oeo-bZ-Uoq"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="388" y="118"/>
-        </scene>
-        <!--Menu View Controller-->
-        <scene sceneID="Vkd-0S-OI5">
-            <objects>
-                <tableViewController storyboardIdentifier="Menu" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ovX-xB-EEy" customClass="ALMenuViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Wv3-6u-NTJ">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="qcM-Ve-CNn">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="ovX-xB-EEy" id="rNS-1t-MGf"/>
-                            <outlet property="delegate" destination="ovX-xB-EEy" id="7sg-5E-pKd"/>
-                        </connections>
-                    </tableView>
-                    <nil key="simulatedTopBarMetrics"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2si-9X-u8X" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="309" y="798"/>
+            <point key="canvasLocation" x="288" y="234"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="5IR-BK-r6Z">
@@ -83,7 +37,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gYY-8J-mph" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="743" y="936"/>
+            <point key="canvasLocation" x="798" y="760"/>
         </scene>
         <!--Main View Controller - Search Twitter-->
         <scene sceneID="Xaa-UN-teY">
@@ -110,7 +64,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oi-g3-HaM">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="lN9-nJ-GfG"/>
-                                    <constraint firstAttribute="height" constant="30" id="lXl-Pf-n0H"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="15"/>
                                 <state key="normal" title="Search">
@@ -122,32 +75,117 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5UM-PH-qGO">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Lfl-Rb-FOG"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SGL-4b-Grl">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5WG-XK-juL">
+                                    <size key="itemSize" width="320" height="130"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="approvedTweetCell" id="TDX-dz-0JC" customClass="ALCMSTweetCollectionViewCell">
+                                        <rect key="frame" x="5" y="5" width="310" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="310" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XwE-ng-pob">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="49" id="6pJ-D0-eCs"/>
+                                                        <constraint firstAttribute="width" constant="49" id="jmG-gH-iDw"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="@dodgers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mv2-F1-k3H">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="150" id="bQe-4T-974"/>
+                                                        <constraint firstAttribute="height" constant="21" id="r7O-f8-wih"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="[tweetCell.status setText:[tweet objectForKey:@&quot;text&quot;]];" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="235" translatesAutoresizingMaskIntoConstraints="NO" id="HTB-To-Cll">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="235" id="3mD-b5-uny"/>
+                                                        <constraint firstAttribute="height" priority="255" constant="30" type="user" id="snX-VK-ora"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.89017917800000002" green="0.89017917800000002" blue="0.89017917800000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="mv2-F1-k3H" firstAttribute="leading" secondItem="XwE-ng-pob" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="1I6-KO-boX"/>
+                                            <constraint firstItem="HTB-To-Cll" firstAttribute="leading" secondItem="XwE-ng-pob" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="HyS-Td-Z56"/>
+                                            <constraint firstItem="XwE-ng-pob" firstAttribute="leading" secondItem="TDX-dz-0JC" secondAttribute="leading" constant="8" id="R8O-x8-Eba"/>
+                                            <constraint firstItem="HTB-To-Cll" firstAttribute="top" secondItem="TDX-dz-0JC" secondAttribute="top" constant="24" id="TcQ-OV-Saw"/>
+                                            <constraint firstItem="mv2-F1-k3H" firstAttribute="top" secondItem="XwE-ng-pob" secondAttribute="top" type="default" id="qda-AP-6Fs"/>
+                                            <constraint firstItem="XwE-ng-pob" firstAttribute="top" secondItem="TDX-dz-0JC" secondAttribute="top" constant="8" id="thd-wW-kWQ"/>
+                                        </constraints>
+                                        <size key="customSize" width="310" height="100"/>
+                                        <connections>
+                                            <outlet property="avatar" destination="XwE-ng-pob" id="59X-Ee-jGs"/>
+                                            <outlet property="status" destination="HTB-To-Cll" id="RrM-tK-gbt"/>
+                                            <outlet property="userName" destination="mv2-F1-k3H" id="NT2-G1-XL7"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="APR-Yg-9sM" id="xoi-7X-8sx"/>
+                                    <outlet property="delegate" destination="APR-Yg-9sM" id="VbM-4z-H73"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Selected Tweets" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Tf-vG-d1D">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="NGj-Sw-tag"/>
+                                    <constraint firstAttribute="width" constant="126" id="iZV-PH-ITy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="5UM-PH-qGO" firstAttribute="leading" secondItem="Twf-jD-ufl" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="0kR-V4-pv4"/>
+                            <constraint firstItem="SGL-4b-Grl" firstAttribute="trailing" secondItem="Twf-jD-ufl" secondAttribute="trailing" type="default" id="1Zk-le-wkL"/>
+                            <constraint firstItem="4Tf-vG-d1D" firstAttribute="top" secondItem="5UM-PH-qGO" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="5GW-O5-xA0"/>
                             <constraint firstItem="e7h-zI-wFa" firstAttribute="top" secondItem="Twf-jD-ufl" secondAttribute="top" type="default" id="Cdv-un-UgM"/>
-                            <constraint firstItem="e7h-zI-wFa" firstAttribute="centerY" secondItem="Twf-jD-ufl" secondAttribute="centerY" type="default" id="DeQ-KB-9F1"/>
                             <constraint firstAttribute="trailing" secondItem="1oi-g3-HaM" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Iu0-b9-IGb"/>
+                            <constraint firstItem="1oi-g3-HaM" firstAttribute="bottom" secondItem="5UM-PH-qGO" secondAttribute="bottom" type="default" id="J3F-vi-BLl"/>
                             <constraint firstItem="e7h-zI-wFa" firstAttribute="leading" secondItem="Twf-jD-ufl" secondAttribute="leading" type="default" id="O2H-5y-gzo"/>
+                            <constraint firstItem="e7h-zI-wFa" firstAttribute="bottom" secondItem="Twf-jD-ufl" secondAttribute="bottom" type="default" id="TsL-o2-Vtd"/>
+                            <constraint firstItem="SGL-4b-Grl" firstAttribute="bottom" secondItem="Twf-jD-ufl" secondAttribute="bottom" type="default" id="X20-sD-qTd"/>
+                            <constraint firstItem="4Tf-vG-d1D" firstAttribute="leading" secondItem="Twf-jD-ufl" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Xux-fx-O9O"/>
+                            <constraint firstItem="5UM-PH-qGO" firstAttribute="top" secondItem="Twf-jD-ufl" secondAttribute="top" constant="20" symbolic="YES" type="default" id="eVv-uX-Uex"/>
                             <constraint firstItem="1oi-g3-HaM" firstAttribute="leading" secondItem="5UM-PH-qGO" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="gE3-ph-e92"/>
-                            <constraint firstItem="5UM-PH-qGO" firstAttribute="top" secondItem="Twf-jD-ufl" secondAttribute="top" constant="20" symbolic="YES" type="default" id="h8Q-HN-ekH"/>
+                            <constraint firstItem="SGL-4b-Grl" firstAttribute="leading" secondItem="Twf-jD-ufl" secondAttribute="leading" type="default" id="lbL-rb-pxZ"/>
                             <constraint firstItem="e7h-zI-wFa" firstAttribute="trailing" secondItem="Twf-jD-ufl" secondAttribute="trailing" type="default" id="m32-J4-rhL"/>
                             <constraint firstItem="1oi-g3-HaM" firstAttribute="top" secondItem="Twf-jD-ufl" secondAttribute="top" constant="20" symbolic="YES" type="default" id="ozl-GA-3jV"/>
+                            <constraint firstItem="SGL-4b-Grl" firstAttribute="top" secondItem="4Tf-vG-d1D" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="riA-p9-uHp"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="PyX-7t-GmQ"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="collectionView" destination="SGL-4b-Grl" id="JJG-FZ-0is"/>
                         <outlet property="searchField" destination="5UM-PH-qGO" id="k7W-Wk-yAK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5oN-M7-xLK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="802" y="118"/>
+            <point key="canvasLocation" x="798" y="80"/>
         </scene>
         <!--Twitter Search Results View Controller-->
         <scene sceneID="cj7-wf-lhm">
@@ -165,7 +203,7 @@
                                     <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="tweetCell" id="YMj-g1-Hia" customClass="ALTweetCollectionViewCell">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="tweetCell" id="YMj-g1-Hia" customClass="ALSearchTweetCollectionViewCell">
                                         <rect key="frame" x="5" y="5" width="310" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -274,26 +312,30 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vl8-Cb-BRQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1280" y="520"/>
+            <point key="canvasLocation" x="1212" y="80"/>
         </scene>
     </scenes>
     <classes>
-        <class className="ALInitialViewController" superclassName="ECSlidingViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ALInitialViewController.h"/>
+        <class className="ALCMSTweetCollectionViewCell" superclassName="UICollectionViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ALCMSTweetCollectionViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="avatar" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="createdAt" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="status" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="userName" candidateClass="UILabel"/>
+            </relationships>
         </class>
         <class className="ALMainViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ALMainViewController.h"/>
             <relationships>
                 <relationship kind="action" name="hiddenDismissKeyboard:"/>
                 <relationship kind="action" name="search:"/>
+                <relationship kind="outlet" name="collectionView" candidateClass="UICollectionView"/>
                 <relationship kind="outlet" name="searchField" candidateClass="UITextField"/>
             </relationships>
         </class>
-        <class className="ALMenuViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ALMenuViewController.h"/>
-        </class>
-        <class className="ALTweetCollectionViewCell" superclassName="UICollectionViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ALTweetCollectionViewCell.h"/>
+        <class className="ALSearchTweetCollectionViewCell" superclassName="UICollectionViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ALSearchTweetCollectionViewCell.h"/>
             <relationships>
                 <relationship kind="outlet" name="avatar" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="createdAt" candidateClass="UILabel"/>
@@ -308,9 +350,6 @@
                 <relationship kind="outlet" name="collectionView" candidateClass="UICollectionView"/>
             </relationships>
         </class>
-        <class className="ECSlidingViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ECSlidingViewController.h"/>
-        </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
@@ -322,9 +361,6 @@
         </class>
         <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
-        </class>
-        <class className="UICollectionViewLayout" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

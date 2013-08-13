@@ -40,10 +40,11 @@
 		FA1C3DED17B580B1008371FA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1C3DEB17B580B1008371FA /* Security.framework */; };
 		FA1C3DEF17B580D1008371FA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1C3DEE17B580D1008371FA /* SystemConfiguration.framework */; };
 		FA1C3DFF17B582E9008371FA /* ALTweet.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1C3DFA17B582E8008371FA /* ALTweet.m */; };
-		FA1C3E0017B582E9008371FA /* ALTweetCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1C3DFC17B582E8008371FA /* ALTweetCollectionViewCell.m */; };
+		FA1C3E0017B582E9008371FA /* ALSearchTweetCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1C3DFC17B582E8008371FA /* ALSearchTweetCollectionViewCell.m */; };
 		FA1C3E0117B582E9008371FA /* ALTwitterCMSApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1C3DFE17B582E9008371FA /* ALTwitterCMSApiClient.m */; };
 		FA1C3E0417B585FD008371FA /* ALTwitterSearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1C3E0317B585FD008371FA /* ALTwitterSearchResultsViewController.m */; };
 		FA1C3E0617B58CD4008371FA /* default_profile_0_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1C3E0517B58CD4008371FA /* default_profile_0_normal.png */; };
+		FA721F5E17BAB15E00821F55 /* ALCMSTweetCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA721F5D17BAB15E00821F55 /* ALCMSTweetCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,13 +102,15 @@
 		FA1C3DEE17B580D1008371FA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		FA1C3DF917B582E8008371FA /* ALTweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALTweet.h; sourceTree = "<group>"; };
 		FA1C3DFA17B582E8008371FA /* ALTweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALTweet.m; sourceTree = "<group>"; };
-		FA1C3DFB17B582E8008371FA /* ALTweetCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALTweetCollectionViewCell.h; sourceTree = "<group>"; };
-		FA1C3DFC17B582E8008371FA /* ALTweetCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALTweetCollectionViewCell.m; sourceTree = "<group>"; };
+		FA1C3DFB17B582E8008371FA /* ALSearchTweetCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALSearchTweetCollectionViewCell.h; sourceTree = "<group>"; };
+		FA1C3DFC17B582E8008371FA /* ALSearchTweetCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALSearchTweetCollectionViewCell.m; sourceTree = "<group>"; };
 		FA1C3DFD17B582E8008371FA /* ALTwitterCMSApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALTwitterCMSApiClient.h; sourceTree = "<group>"; };
 		FA1C3DFE17B582E9008371FA /* ALTwitterCMSApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALTwitterCMSApiClient.m; sourceTree = "<group>"; };
 		FA1C3E0217B585FD008371FA /* ALTwitterSearchResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALTwitterSearchResultsViewController.h; sourceTree = "<group>"; };
 		FA1C3E0317B585FD008371FA /* ALTwitterSearchResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALTwitterSearchResultsViewController.m; sourceTree = "<group>"; };
 		FA1C3E0517B58CD4008371FA /* default_profile_0_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default_profile_0_normal.png; sourceTree = "<group>"; };
+		FA721F5C17BAB15E00821F55 /* ALCMSTweetCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALCMSTweetCollectionViewCell.h; sourceTree = "<group>"; };
+		FA721F5D17BAB15E00821F55 /* ALCMSTweetCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALCMSTweetCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,9 +133,6 @@
 		FA1C3D8217B57BF1008371FA = {
 			isa = PBXGroup;
 			children = (
-				FA1C3DEE17B580D1008371FA /* SystemConfiguration.framework */,
-				FA1C3DEA17B580B1008371FA /* MobileCoreServices.framework */,
-				FA1C3DEB17B580B1008371FA /* Security.framework */,
 				FA1C3D9417B57BF1008371FA /* TwitterCMS */,
 				FA1C3D8D17B57BF1008371FA /* Frameworks */,
 				FA1C3D8C17B57BF1008371FA /* Products */,
@@ -150,6 +150,9 @@
 		FA1C3D8D17B57BF1008371FA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA1C3DEE17B580D1008371FA /* SystemConfiguration.framework */,
+				FA1C3DEA17B580B1008371FA /* MobileCoreServices.framework */,
+				FA1C3DEB17B580B1008371FA /* Security.framework */,
 				FA1C3D8E17B57BF1008371FA /* UIKit.framework */,
 				FA1C3D9017B57BF1008371FA /* Foundation.framework */,
 				FA1C3D9217B57BF1008371FA /* CoreGraphics.framework */,
@@ -164,8 +167,8 @@
 				FA1C3E0317B585FD008371FA /* ALTwitterSearchResultsViewController.m */,
 				FA1C3DF917B582E8008371FA /* ALTweet.h */,
 				FA1C3DFA17B582E8008371FA /* ALTweet.m */,
-				FA1C3DFB17B582E8008371FA /* ALTweetCollectionViewCell.h */,
-				FA1C3DFC17B582E8008371FA /* ALTweetCollectionViewCell.m */,
+				FA1C3DFB17B582E8008371FA /* ALSearchTweetCollectionViewCell.h */,
+				FA1C3DFC17B582E8008371FA /* ALSearchTweetCollectionViewCell.m */,
 				FA1C3DFD17B582E8008371FA /* ALTwitterCMSApiClient.h */,
 				FA1C3DFE17B582E9008371FA /* ALTwitterCMSApiClient.m */,
 				FA1C3D9D17B57BF1008371FA /* ALAppDelegate.h */,
@@ -177,6 +180,8 @@
 				FA1C3DBC17B57CEE008371FA /* ALMainViewController.m */,
 				FA1C3DBE17B57D27008371FA /* ALMenuViewController.h */,
 				FA1C3DBF17B57D28008371FA /* ALMenuViewController.m */,
+				FA721F5C17BAB15E00821F55 /* ALCMSTweetCollectionViewCell.h */,
+				FA721F5D17BAB15E00821F55 /* ALCMSTweetCollectionViewCell.m */,
 				FA1C3D9517B57BF1008371FA /* Supporting Files */,
 			);
 			path = TwitterCMS;
@@ -340,9 +345,10 @@
 				FA1C3DDD17B57F68008371FA /* UIImageView+AFNetworking.m in Sources */,
 				FA1C3DE617B57F96008371FA /* NSDate+TimeAgo.m in Sources */,
 				FA1C3DFF17B582E9008371FA /* ALTweet.m in Sources */,
-				FA1C3E0017B582E9008371FA /* ALTweetCollectionViewCell.m in Sources */,
+				FA1C3E0017B582E9008371FA /* ALSearchTweetCollectionViewCell.m in Sources */,
 				FA1C3E0117B582E9008371FA /* ALTwitterCMSApiClient.m in Sources */,
 				FA1C3E0417B585FD008371FA /* ALTwitterSearchResultsViewController.m in Sources */,
+				FA721F5E17BAB15E00821F55 /* ALCMSTweetCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +471,7 @@
 				FA1C3DB017B57BF1008371FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,10 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ALMainViewController : UIViewController
+@interface ALMainViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *searchField;
+
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+
+
 - (IBAction)search:(id)sender;
 - (IBAction)hiddenDismissKeyboard:(id)sender;
+
+
+
 
 @end

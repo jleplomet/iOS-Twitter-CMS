@@ -6,12 +6,12 @@
 //  Copyright (c) 2013 Avatarlabs. All rights reserved.
 //
 
-#import "ALTweetCollectionViewCell.h"
+#import "ALSearchTweetCollectionViewCell.h"
 #import "ALTweet.h"
 #import "NSDate+TimeAgo.h"
 #import "UIImageView+AFNetworking.h"
 
-@implementation ALTweetCollectionViewCell
+@implementation ALSearchTweetCollectionViewCell
 
 
 - (id)initWithFrame:(CGRect)frame
@@ -33,7 +33,7 @@
         
         UIView *sbg = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 310, 50)];
         self.selectedBackgroundView = sbg;
-        self.selectedBackgroundView.backgroundColor = [UIColor redColor];
+        self.selectedBackgroundView.backgroundColor = [UIColor greenColor];
         
         
     }

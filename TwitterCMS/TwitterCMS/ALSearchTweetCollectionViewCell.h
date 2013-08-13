@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ALTweet.h"
 
-@interface ALTweetCollectionViewCell : UICollectionViewCell
+@interface ALSearchTweetCollectionViewCell : UICollectionViewCell
 
 
 @property (weak, nonatomic) IBOutlet UIImageView *avatar;
